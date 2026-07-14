@@ -29,8 +29,8 @@ export default function CTA() {
   const handleCheckout = () => {
     setIsRedirecting(true);
     setTimeout(() => {
-      setIsRedirecting(false);
-    }, 4000);
+      window.location.href = "https://pay.kiwify.com.br/zIqMrjt";
+    }, 1200);
   };
 
   return (
@@ -120,7 +120,7 @@ export default function CTA() {
               animate={{ opacity: 1, y: 0 }}
               className="text-xs text-brand-gold font-medium bg-brand-gold/10 p-2.5 rounded-lg mb-4 text-center"
             >
-              🔒 Abrindo gateway criptografado Hotmart com preço promocional de R$ 19,90!
+              🔒 Abrindo gateway criptografado Kiwify com preço promocional de R$ 19,90!
             </motion.p>
           )}
 
