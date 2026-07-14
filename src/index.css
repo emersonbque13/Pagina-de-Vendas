@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-brand-light: #f4fcf7;
+  --color-brand-mint: #e6f7ec;
+  --color-brand-accent: #22c55e;
+  --color-brand-dark: #14532d;
+  --color-brand-text: #0f172a;
+
+  --color-brand-navy: #0e1e38;
+  --color-brand-red: #B81D24;
+  --color-brand-gold: #b58d3d;
+  --color-brand-cream: #FAF5EB;
+}
+
+/* Custom scrollbar and ambient styles */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+@keyframes fluorescent-pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(184, 29, 36, 0.8), 0 0 0 0 rgba(229, 172, 56, 0.6);
+  }
+  50% {
+    transform: scale(1.03);
+    box-shadow: 0 0 22px 6px rgba(184, 29, 36, 0.7), 0 0 35px 15px rgba(229, 172, 56, 0.4);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(184, 29, 36, 0), 0 0 0 0 rgba(229, 172, 56, 0);
+  }
+}
+
+.animate-fluorescent-pulse {
+  animation: fluorescent-pulse 1.8s infinite ease-in-out;
+}
+
